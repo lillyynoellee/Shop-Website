@@ -1,0 +1,288 @@
+/* shop.css */
+h1 {
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+h2 {
+    margin-top: 2%;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: -5%;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-top: -15%;
+    text-align: center;
+}
+
+.item {
+    border-radius: 5%;
+    width: 350px;
+    height: 300px;
+    box-shadow: 1px 5px 11px 6px rgba(0,0,0,0.24);
+}
+
+.btn {
+    padding: 1rem 4rem;
+    text-decoration: none;
+    color: white;
+    background-color: #ADB5BD;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+    box-shadow: 1px 5px 11px 6px rgba(0,0,0,0.24);
+    margin-bottom: 30px;  /* Adjust this value for spacing */
+    margin-top: -10%;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:hover {
+    background-color: #6C757D;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 70px 0px;
+    width: 100%;
+    grid-row-gap: 50px;
+    justify-items: center;
+}
+
+.fixed-footer {
+    margin-top: -6.4%;
+}
+
+.last-items {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    grid-column: span 3;
+    margin-top: 50px;  /* Adjust this value for spacing */
+}
+
+.last-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+.last-item h3 {
+    margin-top: 30px; /* Adjust this value to ensure there's space between the image and the text */
+}
+
+.last-item h4 {
+    margin-top: 10px; /* Adjust this value to ensure there's space between the image and the text */
+    margin-bottom: 60px;
+}
+
+.last-item btn {
+    margin-top: 100px; /* Adjust this value to ensure there's space between the image and the text */
+}
+
+.nav {
+    display: flex;
+    gap: 150px;
+    padding-top: 2%;
+    justify-content: center;
+}
+
+.nav a {
+    display: block;
+    padding: 2rem 4rem;
+    text-decoration: none;
+    color: white;
+    background-color: #ADB5BD;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+    box-shadow: 1px 5px 11px 6px rgba(0,0,0,0.24);
+}
+
+.nav a:hover {
+    background-color: #6C757D;
+}
+
+.fade-in {
+    animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp ease 5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0,40px,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+/* Hover */
+@keyframes hover {
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+.hover {
+    display: inline-block;
+    transition-duration: .5s;
+    transition-property: transform;
+}
+
+.hover:hover {
+    transform: translateY(-6px);
+    animation-name: hover;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .page-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        gap: 50px;
+    }
+
+    .nav a {
+        padding: 1.5rem 3rem;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+    }
+
+    .item {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav a {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .item {
+        width: 100%;
+        height: auto;
+    }
+
+    .last-items {
+        flex-direction: column;
+    }
+
+    .last-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}

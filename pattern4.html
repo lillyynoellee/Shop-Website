@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chevron Bracelet</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/pattern1.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+</head>
+<body>
+    <div class="popup fade-in-up">
+        <a href="/patterns.html" class="close-btn">&times;</a> <!-- Close button -->
+        <div class="mySlides fade">
+            <img src="/assets/images/DSCN0130.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="/assets/images/DSCN0126.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="/assets/images/DSCN0125.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="/assets/images/DSCN0131.JPG" class="img">
+        </div>
+        <div class="box2">
+            <h1>CHEVRON BRACELET</h1>
+            <h2>PRICE: $2.99<br><br>THE CHEVRON BRACELET IS ANOTHER BEGINNING FRIENDLY PATTERN THAT ALSO SERVES AS A BIT OF A CHALLENGE FOR THOSE LOOKING TO MAKE A FRIENDSHIP BRACELET. THIS BRACELET REQUIRES 4-6 COLORS TO CREATE.</h2>
+            <button id="tutorial-button">TUTORIAL</button>
+            <button class="btn2 open-cart-btn">BUY IT NOW</button>
+        </div>
+    </div>
+       <!-- Main Modal -->
+       <div id="main-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-main-btn">&times;</span> <!-- Close button for main modal -->
+
+            <!-- Section for displaying products -->
+            <section id="products">
+                <h2>Products</h2>
+                <ul id="product-list">
+                    <!-- Products will be dynamically added here by JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Section for displaying cart items -->
+            <section id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cart-items"></ul>
+                <div class="checkout-container">
+                    <div id="cart-total">Total: $<span id="cart-total-value">0.00</span></div> <!-- Display total price -->
+                    <button id="checkout-btn">Proceed to Checkout</button> <!-- Button to open checkout modal -->
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<!-- Customization Modal -->
+<div id="customization-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span> <!-- Close button for customization modal -->
+        <h2>Customize Product</h2>
+        <label for="quantity-input">Quantity:</label>
+        <input type="number" id="quantity-input" min="1"> <!-- Input field for quantity -->
+        <label id="color-label" for="color-input">Color:</label>
+        <input type="text" id="color-input" placeholder="(Enter colors, separated by commas) e.g., red, blue, green"> <!-- Input field for colors -->
+        <button id="save-customization-btn">Save</button> <!-- Button to save customization -->
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-checkout-btn">&times;</span> <!-- Close button for checkout modal -->
+        <h2>Checkout</h2>
+        <form id="checkout-form" action="https://formspree.io/f/xyzgzpjv" method="POST"> <!-- Form for checkout with Formspree integration -->
+            <!-- Input fields for user information -->
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="\d*" required>
+            <label for="street-address">Street Address:</label>
+            <input type="text" id="street-address" name="street-address" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+            <label for="zip-code">Zip Code:</label>
+            <input type="text" id="zip-code" name="zip-code" required>
+
+            <!-- Payment method options -->
+            <h3>Payment Method</h3>
+            <div class="payment-method-options">
+                <div class="payment-option">
+                    <label for="venmo-payment">Pay with Venmo</label>
+                    <input type="checkbox" id="venmo-payment" name="payment-method" value="venmo" class="checkbox1">
+                </div>
+                <div class="payment-option">
+                    <label for="in-person-payment">Pay in-cash</label>
+                    <input type="checkbox" id="in-person-payment" name="payment-method" value="in-person" class="checkbox2">
+                </div>
+            </div>
+
+            <!-- Hidden input fields for Formspree -->
+            <input type="hidden" id="order-details" name="order-details">
+            <input type="hidden" id="order-total" name="order-total">
+            <input type="hidden" name="_subject" value="New Checkout Submission">
+            <button type="submit" id="submit-checkout-btn">Submit</button> <!-- Button to submit checkout form -->
+        </form>
+    </div>
+</div>
+</body>
+<script src="./js/slideshow.js"></script>
+<script src="./js/cart.js"></script>
+<script>
+    document.getElementById('tutorial-button').addEventListener('click', function() {
+        window.open('https://www.youtube.com/watch?v=nNOioNDsg2s', '_blank');
+    });
+</script>
+</html>

@@ -1,0 +1,120 @@
+/* pattern1.css */
+body {
+    background-color: #7C7F83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: #B8BDC3;
+    max-width: 100%; /* Adjusted to fit smaller screens */
+    width: 1300px;
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Vertically center */
+    position: relative; /* Needed for absolute positioning of the close button */
+    overflow: hidden; /* Prevents horizontal scroll on smaller screens */
+}
+
+.img {
+    border-radius: 10px;
+    width: 100%; /* Adjusted to fit smaller screens */
+    max-width: 600px; /* Maximum width for larger screens */
+    margin-left: 5%;
+}
+
+.box2 {
+    margin-left: 12%;
+    margin-right: 5%;
+}
+
+.box2 h2 {
+    margin-top: 10%;
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+}
+
+.box2 button {
+    margin-top: 10%;
+    font-size: 1rem;
+}
+
+.btn2 {
+    margin-left: 25px;
+}
+
+.close-btn {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    /* Tablet Viewport */
+    .popup {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Viewport */
+    .popup {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height based on content */
+    }
+
+    .img {
+        margin-left: 0;
+    }
+
+    .box2 {
+        margin: 5% auto; /* Center align */
+    }
+
+    .box2 h2 {
+        margin-top: 5%;
+        font-size: 1.2rem;
+    }
+
+    .box2 button {
+        margin-top: 5%;
+        font-size: 0.9rem;
+    }
+
+    .btn2 {
+        margin-left: 0;
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller Mobile Viewport */
+    .popup {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .box2 {
+        margin: 3% auto;
+    }
+
+    .box2 h2 {
+        font-size: 1rem;
+    }
+
+    .box2 button {
+        font-size: 0.8rem;
+    }
+}

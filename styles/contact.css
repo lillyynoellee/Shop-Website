@@ -1,0 +1,131 @@
+/* contact.css */
+h1 {
+    margin-top: 5%;
+    font-size: 3rem;
+}
+
+h2 {
+    margin-top: 5%;
+    font-size: 2rem;
+}
+
+h3 {
+    margin-top: 2%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4%;
+}
+
+.item1 {
+    margin-left: -5%;
+    font-size: 1.5rem;
+}
+
+.item2 {
+    font-size: 1.6rem;
+}
+
+.btn {
+    padding: 2rem 4rem;
+    text-decoration: none;
+    color: white;
+    background-color: #ADB5BD;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+    box-shadow: 1px 5px 11px 6px rgba(0,0,0,0.24);
+    margin-left: -5%;
+}
+
+.btn:hover {
+    background-color: #6C757D;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    /* Tablet Viewport */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item1, .item2 {
+        font-size: 1.4rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+        padding: 1.5rem 3rem;
+        margin: 2% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Viewport */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .item1, .item2 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller Mobile Viewport */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .item1, .item2 {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .fixed-footer {
+        margin-top: -5%;
+    }
+}
