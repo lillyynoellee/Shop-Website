@@ -10,88 +10,107 @@
     <link rel="stylesheet" href="./styles/cart.css">
 </head>
 <body>
-    <nav class="nav fade-in">
+    <nav class="nav fade-in menu" id="menu">
+        <!-- <span class="close-menu" onclick="toggleMenu()">&times;</span> Close button for menu -->
         <a href="./index.html">HOME</a>
         <a href="./shop.html">SHOP</a>
         <a href="./patterns.html">PATTERNS</a>
         <a href="./contact.html">CONTACT</a>
     </nav>
-        <div class="fade-in">
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0236.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0207.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0223.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0198.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0193.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0191.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0183.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0174.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0167.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0159.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0155.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0136.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0131.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0293.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0286.JPG" class="img">
-            </div>
-            <div class="mySlides fade">
-                <img src="./assets/images/DSCN0278.JPG" class="img">
-            </div>
-        </div>
-        
-        <!-- Main Modal -->
-        <div id="main-modal" class="modal fade-in2">
-            <div class="modal-content">
-                <span class="close-main-btn">&times;</span> <!-- Close button for main modal -->
 
-                <!-- Section for displaying products -->
-                <section id="products">
-                    <h2>Products</h2>
-                    <ul id="product-list">
-                        <!-- Products will be dynamically added here by JavaScript -->
-                    </ul>
-                </section>
+<!-- Hamburger Menu Icon -->
+<div class="hamburger" onclick="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
 
-                <!-- Section for displaying cart items -->
-                <section id="cart">
-                    <h2>Your Cart</h2>
-                    <ul id="cart-items"></ul>
-                    <div class="checkout-container">
-                        <div id="cart-total">Total: $<span id="cart-total-value">0.00</span></div> <!-- Display total price -->
-                        <button id="checkout-btn">Proceed to Checkout</button> <!-- Button to open checkout modal -->
-                    </div>
-                </section>
-            </div>
+<!-- Mobile Navigation Menu -->
+<nav class="mobile-nav" id="mobile-menu">
+    <span class="close-menu" onclick="toggleMenu()">&times;</span>
+    <a href="./index.html">HOME</a>
+    <a href="./shop.html">SHOP</a>
+    <a href="./patterns.html">PATTERNS</a>
+    <a href="./contact.html">CONTACT</a>
+</nav>
+
+<div class="content">
+    
+    <div class="fade-in">
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0236.JPG" class="img">
         </div>
-    </main>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0207.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0223.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0198.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0193.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0191.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0183.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0174.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0167.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0159.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0155.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0136.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0131.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0293.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0286.JPG" class="img">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/images/DSCN0278.JPG" class="img">
+        </div>
+    </div>
+    
+    <!-- Main Modal -->
+    <div id="main-modal" class="modal fade-in2">
+        <div class="modal-content">
+            <span class="close-main-btn">&times;</span> <!-- Close button for main modal -->
+
+            <!-- Section for displaying products -->
+            <section id="products">
+                <h2>Products</h2>
+                <ul id="product-list">
+                    <!-- Products will be dynamically added here by JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Section for displaying cart items -->
+            <section id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cart-items"></ul>
+                <div class="checkout-container">
+                    <div id="cart-total">Total: $<span id="cart-total-value">0.00</span></div> <!-- Display total price -->
+                    <button id="checkout-btn">Proceed to Checkout</button> <!-- Button to open checkout modal -->
+                </div>
+            </section>
+        </div>
+    </div>
 
     <!-- Customization Modal -->
     <div id="customization-modal" class="modal">
@@ -158,7 +177,29 @@
             <img src="./assets/images/cart.png" class="cart-icon hover open-cart-btn" alt="CartIcon" width="100px">
         </div>
     </footer>
+</div>
 </body>
 <script src="./js/slideshow.js"></script>
 <script src="./js/cart.js"></script>
+<script>
+    // menu.js
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const isMenuOpen = menu.style.display === 'block';
+    
+    menu.style.display = isMenuOpen ? 'none' : 'block';
+    document.querySelector('.hamburger').style.display = isMenuOpen ? 'block' : 'none';
+}
+
+// Hide the menu when clicking outside of it (optional)
+window.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.style.display = 'none';
+    }
+});
+
+</script>
 </html>
