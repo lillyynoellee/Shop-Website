@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 /* Link Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
@@ -19,6 +24,10 @@ body {
     color: white;
     text-shadow: 4px 4px 10px rgba(0,0,0,0.6);
     margin: 0;
+}
+
+content{
+    flex: 1;
 }
 
 nav {
@@ -151,18 +160,18 @@ footer {
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
+}
+
+@keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
-  }
-  
-  .mySlides {
-    display: none;
-  }
+}
 
-  /* main.css or patterns.css */
+.mySlides {
+    display: none;
+}
+
+/* MODAL STYLES */
 .modal {
     display: none;
     position: fixed;
@@ -226,67 +235,123 @@ footer {
     margin-bottom: 4%;
 }
 
-@media screen and (max-width: 768px) {
-    /* Adjustments for tablet viewports */
-    .nav {
-        gap: 50px;
-    }
+/* RESPONSIVE DESIGN */
 
-    .nav a {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-    }
+/* Hamburger Menu Icon Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    position: fixed; /* Fixed positioning to stay in the viewport */
+    top: 10px; /* Adjust vertical position */
+    left: 10px; /* Adjust horizontal position */
+    z-index: 1000; /* Ensure it appears above other content */
+}
 
-    .page-content {
-        padding: 20px;
-    }
+.hamburger .line {
+    width: 30px; /* Adjust width as needed */
+    height: 3px;
+    background-color: white;
+    margin: 5px 0; /* Adjust margin to space out lines */
+    transition: 0.3s;
+}
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
+/* Hide the hamburger menu on larger screens */
+@media (min-width: 740px) {
+    .hamburger {
+        display: none; /* Hide hamburger menu on tablet and desktop */
     }
-
-    .footer-content img {
-        margin-bottom: 10px;
-    }
-
-    .cart-icon {
-        margin: 0;
+    
+    .mobile-nav {
+        display: none; /* Hide mobile nav on tablet and desktop */
     }
 }
 
-@media screen and (max-width: 480px) {
-    /* Adjustments for mobile viewports */
-    .nav {
-        flex-direction: column;
-        gap: 20px;
-    }
 
+
+
+
+/* TABLET HORIZONTAL */
+@media (min-width: 1000px) and (max-width: 1360px) and (min-height: 740px) and (max-height: 1020px) {
     .nav a {
-        padding: 1rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        margin-left: -4%;
+        margin-right: -4%;
     }
+}
 
-    .page-content {
-        flex-direction: column;
-        padding: 10px;
+/* TABLET VERTICAL */
+@media (min-width: 740px) and (max-width: 1020px) and (min-height: 1000px) and (max-height: 1360px) {
+    .nav {
+        display: none;
     }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
+    
+    html, body {
+        height: 100%; /* Ensure the body takes up full height */
+        margin: 0; /* Remove default margin */
     }
+    
+}
 
-    .footer-content img {
-        margin-bottom: 10px;
-    }
 
-    .cart-icon {
-        margin: 0;
-    }
 
-    .img {
-        width: 100%;
-        height: auto;
+
+/* MOBILE */
+@media (min-width: 320px) and (max-width: 430px) and (min-height: 570px) and (max-height: 930px) {
+}
+
+/* Mobile Navigation Menu Styles */
+/* pop-up menu for mobile nav w/ hamburger icon */
+.mobile-nav {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with opacity */
+    z-index: 1000; /* Ensure it appears above other content */
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* links for mobile nav */
+.mobile-nav a {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+    
+.mobile-nav a:hover {
+    background-color: #6C757D; /* Hover color */
+}
+    
+.close-menu {
+    position: absolute; /* Absolute positioning within the mobile nav */
+    top: 20px; /* Adjust vertical position */
+    left: 20px; /* Adjust horizontal position */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+    
+.close-menu:hover {
+    color: #6C757D; /* Hover color */
+}
+    
+/* Responsive Design for Mobile */
+@media (max-width: 739px) {
+.hamburger {
+    display: block; /* Show hamburger menu on mobile */
+}
+        
+.nav {
+    display: none; /* Hide the desktop nav */
+}
+        
+.mobile-nav {
+    display: block; /* Show mobile nav when active */
     }
 }
