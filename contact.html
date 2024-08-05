@@ -10,12 +10,30 @@
     <link rel="stylesheet" href="./styles/cart.css">
 </head>
 <body>
-    <nav class="nav fade-in">
+    <nav class="nav fade-in menu" id="menu">
+        <!-- <span class="close-menu" onclick="toggleMenu()">&times;</span> Close button for menu -->
         <a href="./index.html">HOME</a>
         <a href="./shop.html">SHOP</a>
         <a href="./patterns.html">PATTERNS</a>
         <a href="./contact.html">CONTACT</a>
     </nav>
+
+<!-- Hamburger Menu Icon -->
+<div class="hamburger" onclick="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+
+<!-- Mobile Navigation Menu -->
+<nav class="mobile-nav" id="mobile-menu">
+    <span class="close-menu" onclick="toggleMenu()">&times;</span>
+    <a href="./index.html">HOME</a>
+    <a href="./shop.html">SHOP</a>
+    <a href="./patterns.html">PATTERNS</a>
+    <a href="./contact.html">CONTACT</a>
+</nav>
+
     <h1 class="fade-in-up">CONTACT</h1>
     <h2 class="fade-in-up">CONTACT INFORMATION:</h2>
     <h3 class="fade-in-up">IF YOU'D LIKE TO MAKE A CUSTOM REQUEST OR ORDER, OR HAVE ANY QUESTIONS<br>PLEASE CONTACT ME USING THESE METHODS</h3>
@@ -119,4 +137,25 @@
 </body>
 <script src="./js/main.js"></script>
 <script src="./js/cart.js"></script>
+<script>
+    // menu.js
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const isMenuOpen = menu.style.display === 'block';
+    
+    menu.style.display = isMenuOpen ? 'none' : 'block';
+    document.querySelector('.hamburger').style.display = isMenuOpen ? 'block' : 'none';
+}
+
+// Hide the menu when clicking outside of it (optional)
+window.addEventListener('click', function(event) {
+    const menu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger');
+    
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.style.display = 'none';
+    }
+});
+
+</script>
 </html>
