@@ -82,7 +82,7 @@ h3 {
     /* Mobile Viewport */
     h1 {
         font-size: 2rem;
-        margin-top: 60%;
+        margin-top: 30%;
     }
 
     h2 {
@@ -100,6 +100,11 @@ h3 {
 
     .item1{
         margin-top: 7%;
+    }
+
+    .item2{
+        text-decoration: none;
+        color: white;
     }
 
     .btn {
